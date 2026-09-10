@@ -578,9 +578,9 @@ mod tests {
 
         let gas = call_last_frame_return(ctx, InstructionResult::Stop, eip8037_child_gas());
         assert_eq!(gas.state_gas_spent(), 20);
-        assert_eq!(gas.state_gas_spilled(), 10);
-        assert_eq!(gas.reservoir(), 30);
-        assert_eq!(gas.remaining(), 50);
+        assert_eq!(gas.state_gas_spilled(), 0);
+        assert_eq!(gas.reservoir(), 20);
+        assert_eq!(gas.remaining(), 60);
     }
 
     #[test]

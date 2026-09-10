@@ -297,10 +297,10 @@ base-metrics = { path = "crates/utilities/metrics", default-features = false }
 base-runtime = { path = "crates/utilities/runtime", default-features = false }
 
 # revm
-revm = { version = "42.0.1", default-features = false }
-revm-bytecode = { version = "42.0.0", default-features = false }
-revm-database = { version = "42.0.0", default-features = false }
-revm-precompile = { version = "42.0.1", default-features = false }
+revm = { version = "43.0.0", default-features = false }
+revm-bytecode = { version = "43.0.0", default-features = false }
+revm-database = { version = "43.0.0", default-features = false }
+revm-precompile = { version = "43.0.0", default-features = false }
 
 # evm2
 evm2 = { git = "https://github.com/alloy-rs/evm2", rev = "9b037449c846515624ff6afde739f2b764851446", default-features = false }
@@ -324,7 +324,7 @@ alloy-rpc-types-beacon = "2.3.0"
 alloy-rlp = { version = "0.3.16", default-features = false }
 alloy-trie = { version = "0.9.4", default-features = false }
 alloy-eips = { version = "2.3.0", default-features = false }
-alloy-evm = { version = "0.38.0", default-features = false }
+alloy-evm = { version = "0.39.0", default-features = false }
 alloy-serde = { version = "2.3.0", default-features = false }
 alloy-chains = { version = "0.2.33", default-features = false }
 alloy-genesis = { version = "2.3.0", default-features = false }
