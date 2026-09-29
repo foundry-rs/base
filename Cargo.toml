@@ -615,7 +615,6 @@ derive_more = { version = "2.1.0", default-features = false }
 
 # no_std
 spin = "0.10"
-cfg-if = "1.0"
 alloc-no-stdlib = "2.0"
 lazy_static = { version = "1.5.0", features = ["spin_no_std"] }
 

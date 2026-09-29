@@ -47,7 +47,6 @@ spin.workspace = true
 
 # kzg
 kzg-rs = { workspace = true, features = ["serde", "rkyv"] }
-cfg-if.workspace = true
 
 [dev-dependencies]
 base-common-chains.workspace = true

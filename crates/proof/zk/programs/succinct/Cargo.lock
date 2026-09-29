@@ -1235,7 +1235,6 @@ dependencies = [
  "base-proof-preimage",
  "base-proof-primitives",
  "base-protocol",
- "cfg-if",
  "kzg-rs",
  "revm",
  "revm-precompile",
