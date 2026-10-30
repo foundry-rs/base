@@ -175,7 +175,7 @@ mod tests {
             base_mainnet_forks[Beryl],
             ForkCondition::Timestamp(ChainConfig::mainnet().beryl_timestamp.unwrap())
         );
-        assert_eq!(base_mainnet_forks[Cobalt], ForkCondition::Never);
+        assert_eq!(base_mainnet_forks[Cobalt], ForkCondition::Timestamp(1_790_791_200));
         assert_eq!(base_mainnet_forks[Denim], ForkCondition::Never);
         assert_eq!(base_mainnet_forks[Zenith], ForkCondition::Never);
     }
@@ -227,7 +227,7 @@ mod tests {
             base_sepolia_forks[Beryl],
             ForkCondition::Timestamp(ChainConfig::sepolia().beryl_timestamp.unwrap())
         );
-        assert_eq!(base_sepolia_forks[Cobalt], ForkCondition::Never);
+        assert_eq!(base_sepolia_forks[Cobalt], ForkCondition::Timestamp(1_790_186_400));
         assert_eq!(base_sepolia_forks[Denim], ForkCondition::Never);
         assert_eq!(base_sepolia_forks[Zenith], ForkCondition::Never);
     }

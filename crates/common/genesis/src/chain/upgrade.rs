@@ -667,7 +667,7 @@ impl UpgradeConfig {
         base: BaseUpgradeConfig {
             azul: Some(1_779_991_200),
             beryl: Some(1_782_410_400),
-            cobalt: None,
+            cobalt: Some(1_790_791_200),
             denim: None,
             zenith: None,
         },
@@ -691,7 +691,7 @@ impl UpgradeConfig {
         base: BaseUpgradeConfig {
             azul: Some(1_776_708_000),
             beryl: Some(1_781_805_600),
-            cobalt: None,
+            cobalt: Some(1_790_186_400),
             denim: None,
             zenith: None,
         },
@@ -1084,6 +1084,26 @@ mod runtime_tests {
     }
 
     #[test]
+    fn cobalt_activation_boundaries() {
+        let _guard = RUNTIME_REGISTRY_TEST_LOCK.lock();
+        RuntimeUpgradeRegistry::clear_chain(8453);
+        RuntimeUpgradeRegistry::clear_chain(84532);
+
+        for (chain_id, timestamp, expected) in [
+            (8453, 1_790_791_199, BaseUpgrade::Beryl),
+            (8453, 1_790_791_200, BaseUpgrade::Cobalt),
+            (84532, 1_790_186_399, BaseUpgrade::Beryl),
+            (84532, 1_790_186_400, BaseUpgrade::Cobalt),
+        ] {
+            assert_eq!(
+                BaseUpgrade::from_chain_and_timestamp(chain_id, timestamp),
+                Some(expected),
+                "chain {chain_id} at {timestamp}",
+            );
+        }
+    }
+
+    #[test]
     fn activation_boundaries_respect_overrides() {
         let _guard = RUNTIME_REGISTRY_TEST_LOCK.lock();
         RuntimeUpgradeRegistry::clear_chain(8453);
@@ -1106,6 +1126,7 @@ mod runtime_tests {
 
         RuntimeUpgradeRegistry::clear_chain(CHAIN_ID);
         RuntimeUpgradeRegistry::clear_activation_timestamp(CHAIN_ID, BaseUpgrade::Beryl);
+        RuntimeUpgradeRegistry::clear_activation_timestamp(CHAIN_ID, BaseUpgrade::Cobalt);
 
         assert_eq!(
             BaseUpgrade::from_chain_and_timestamp(CHAIN_ID, u64::MAX),
@@ -1130,7 +1151,7 @@ mod runtime_tests {
         for chain_id in [8453, 84532] {
             assert_eq!(
                 BaseUpgrade::from_chain_and_timestamp(chain_id, u64::MAX),
-                Some(BaseUpgrade::Beryl)
+                Some(BaseUpgrade::Cobalt)
             );
         }
     }
