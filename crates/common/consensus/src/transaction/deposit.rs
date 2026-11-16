@@ -352,7 +352,7 @@ impl TryFrom<UnknownTypedTransaction> for TxDeposit {
             return Err(ConversionError::Custom("invalid transaction type".to_string()));
         }
         value
-            .fields
+            .into_fields()
             .deserialize_into()
             .map_err(|_| ConversionError::Custom("invalid transaction data".to_string()))
     }
