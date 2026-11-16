@@ -302,38 +302,38 @@ revm-precompile = { version = "43.0.3", default-features = false }
 evm2 = { git = "https://github.com/alloy-rs/evm2", rev = "9b037449c846515624ff6afde739f2b764851446", default-features = false }
 
 # alloy
-alloy-signer = "2.5.0"
+alloy-signer = "2.6.0"
 alloy-pubsub = "2.3.0"
-alloy-network = "2.5.0"
-alloy-provider = "2.5.0"
-alloy-contract = "2.5.0"
-alloy-json-rpc = "2.5.0"
-alloy-transport = "2.5.0"
-alloy-rpc-types = "2.5.0"
+alloy-network = "2.6.0"
+alloy-provider = "2.6.0"
+alloy-contract = "2.6.0"
+alloy-json-rpc = "2.6.0"
+alloy-transport = "2.6.0"
+alloy-rpc-types = "2.6.0"
 alloy-hardforks = "0.4.11"
 alloy-sol-macro = "1.6.1"
-alloy-rpc-client = "2.5.0"
-alloy-signer-local = "2.5.0"
+alloy-rpc-client = "2.6.0"
+alloy-signer-local = "2.6.0"
 alloy-transport-ws = "2.3.0"
-alloy-signer-ledger = "2.5.0"
-alloy-node-bindings = "2.5.0"
+alloy-signer-ledger = "2.6.0"
+alloy-node-bindings = "2.6.0"
 alloy-transport-http = "2.3.0"
-alloy-rpc-types-beacon = "2.5.0"
+alloy-rpc-types-beacon = "2.6.0"
 alloy-rlp = { version = "0.3.16", default-features = false }
 alloy-trie = { version = "0.9.8", default-features = false }
-alloy-eips = { version = "2.5.0", default-features = false }
+alloy-eips = { version = "2.6.0", default-features = false }
 alloy-evm = { version = "0.39.0", default-features = false }
-alloy-serde = { version = "2.5.0", default-features = false }
+alloy-serde = { version = "2.6.0", default-features = false }
 alloy-chains = { version = "0.2.33", default-features = false }
-alloy-genesis = { version = "2.5.0", default-features = false }
-alloy-consensus = { version = "2.5.0", default-features = false }
+alloy-genesis = { version = "2.6.0", default-features = false }
+alloy-consensus = { version = "2.6.0", default-features = false }
 alloy-sol-types = { version = "1.6.1", default-features = false }
 revm-inspectors = { version = "0.44.3", default-features = false }
 alloy-primitives = { version = "1.6.1", default-features = false }
-alloy-rpc-types-eth = { version = "2.5.0", default-features = false }
-alloy-rpc-types-debug = { version = "2.5.0", default-features = false }
-alloy-rpc-types-txpool = { version = "2.5.0", default-features = false }
-alloy-rpc-types-engine = { version = "2.5.0", default-features = false }
+alloy-rpc-types-eth = { version = "2.6.0", default-features = false }
+alloy-rpc-types-debug = { version = "2.6.0", default-features = false }
+alloy-rpc-types-txpool = { version = "2.6.0", default-features = false }
+alloy-rpc-types-engine = { version = "2.6.0", default-features = false }
 alloy-network-primitives = { version = "2.3.0", default-features = false }
 
 # reth
